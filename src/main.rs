@@ -11,13 +11,13 @@ use health::{health_controller, health_service::HealthService};
 use lapin::LapinClient;
 use sqlx::PgPool;
 use tracing::info;
+
 mod database;
 mod drivers;
 mod env;
 mod handlers;
 mod health;
 mod lapin;
-mod schema;
 
 async fn spawn_listener(
   queue_name: String,

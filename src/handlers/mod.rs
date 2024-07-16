@@ -1,4 +1,3 @@
-use std::sync::Arc;
 use command_create_credentials::{create_credentials, MessageCreateCredentials};
 use command_fetch::{fetch_once, MessageFetchOnce};
 use futures_lite::StreamExt;
@@ -8,6 +7,7 @@ use lapin::{
   Channel,
 };
 use sqlx::PgPool;
+use std::sync::Arc;
 use tracing::info;
 
 pub mod command_create_credentials;
